@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.cf:before,
+.cf:after {
+    content: "";
+    display: table;
+}
+.cf:after {
+    clear: both;
+}
+.cf {
+    zoom: 1;
+}
+html{
+  font: 300 1em/1.8 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+  background:#eceef4;
+  color: #5f6677;
+}
+.wrapper{
+  max-width: 800px;
+  background: #fff;
+  margin:0 auto 50px;
+  padding: 8% 8%;
+}
+
+.job-area{
+  /*display: flex;
+  align-items: center;*/
+}
+ul,li{
+  list-style: none;
+}
+input, button{
+  outline: none;
+  background: none;
+  border: none;
+}
+input{
+    border: 1px solid #e0e1e6;
+    background-color: #fff;
+    padding-left: .5em;
+    border-radius: 3px;
+}
+input{
+    border: 1px solid #e0e1e6;
+    background-color: #fff;
+    padding-left: .5em;
+    border-radius: 3px;
+}
+input:focus {
+    border: 1px solid #e0e1e6;
+    background-color: #f2f9ff;
+
+}
+button{
+    cursor: pointer;
+    transition: all .3s;
+}
+button:hover{
+  box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+.btn-add-job{
+  display: block;
+  color:#5f6677;
+  border: 1px solid #76a7e1;
+  padding:8px 35px;
+  border-radius: 2px;
+  font-weight: 100;
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+.btn-job{
+  padding: 5px 3%;
+  border: 1px solid #e0e1e6;
+  border-radius: 2px;
+  float: right;
+  margin-left: 3%;
+  color: #9098b8;
+}
+.btn-comfirm-add-job,.btn-cancel-add-job,.btn-comfirm-add-dep,.btn-cancel-add-dep{
+  padding: 5px 3%;
+  border: 1px solid #e0e1e6;
+  border-radius: 2px;
+  float: right;
+  margin-left: 3%;
+  color: #9098b8;
+}
+.btn-dep{
+  padding: 6px 3.2%;
+  border-radius: 2px;
+  float: right;
+  margin-left: 3%;
+  color: #fff;
+}
+.dep-fold{
+  padding: 5px 7px;
+  color: #9098b8;
+  border: 1px solid #e0e1e6;
+}
+.btn-add-dep,.btn-app-save,.btn-reset{
+  background-color: #40c9a2;
+  width:30%;
+  padding: 10px 0;
+  color: #fff;
+  border-radius: 3px;
+}
+.title-department{
+  font-size: 1.2em;
+  font-weight: 400;
+  margin: 0 10px 20px;
+}
+.title-job{
+  font-size: .9em;
+  font-weight: 200;
+  margin: 0 10px;
+}
+.single-job{
+  margin-bottom: 10px;
+}
+.handle-dep, .title-department, .title-job,form{
+  display: inline-block;
+}
+form{
+  max-width:65%;
+}
+.input-dep{
+  height:34px;
+  width: 70%;
+  color:#5f6677;
+  margin-bottom: 20px;
+  font-size: .9em;
+}
+.input-add-job-nu,.input-job-count{
+  width:16%;
+  padding: 5px;
+}
+.input-add-job-name,.input-job-name{
+  width:70%;
+  padding: 5px;
+  margin-right: 3%;
+}
+.input-add-job-name{
+  width:40%;
+}
+.input-add-dep{
+  width:65%;
+  padding: 8px .5em;
+  margin-bottom: 20px;
+}
+.btn-comfirm-add-dep,.job-save, .btn-comfirm-add-job{
+  border: 1px solid #40C9A2;
+  color:#40C9A2;
+}
+.single-department{
+  margin-bottom: 10px;
+}
+.count-job{
+  text-align: center;
+    font-size: .65em;
+    display: inline-block;
+    background: #eeeff5;
+    color: #6d7483;
+    width: 35px;
+    height: 18px;
+    border-radius: 10px;
+}
+.dep-count{
+  text-align: center;
+    font-size: .7em;
+    display: inline-block;
+    background: #eeeff5;
+    color: #6d7483;
+    width: 35px;
+    height: 18px;
+    border-radius: 10px;
+}
+img{
+  transform: translateY(-6px);
+  transition: transform .5s;
+}
+img:hover {
+  transform: rotateX(180deg) translateY(6px);
+}
