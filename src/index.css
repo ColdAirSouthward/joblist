@@ -184,3 +184,11 @@ img{
 img:hover {
   transform: rotateX(180deg) translateY(6px);
 }
+/*=======transition============*/
+.basic-enter{
+  background: tomato;
+}
+.basic-enter.basic-enter-active{
+  background: gold;
+  transition: all 1000ms ease-in;
+}

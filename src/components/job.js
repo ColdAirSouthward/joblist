@@ -10,7 +10,6 @@ class Job extends Component {
             inputCount:this.props.job.count
         };
     }
-
     renderJob() {
         if (this.state.editing) {
             return (
@@ -24,7 +23,6 @@ class Job extends Component {
                 </span>
             );
         }
-
         return (
             <div className="btn-job-default">
                 <input type="checkbox" checked={this.props.job.check} onChange={this.onCheck.bind(this)}/>
@@ -35,14 +33,14 @@ class Job extends Component {
             </div>
         );
     }
+
+    render() {
+        return this.renderJob();
+    }
     onCheck(e){
         const job = this.state.inputJob;
         const dep = e.target.parentNode.parentNode.parentNode.parentNode.parentNode.querySelector('.title-department').innerText;
         this.props.updateJobCheck(dep,job);
-    }
-
-    render() {
-        return this.renderJob();
     }
     handleDeleteJob(e) {
         const job = this.state.inputJob;
@@ -76,7 +74,6 @@ class Job extends Component {
 
         this.setState({inputCount:e.target.value})
     }
-
 }
 
 export default Job;

@@ -13,7 +13,6 @@ class Department extends Component {
             department:this.props.department
         };
     }
-
     renderJobs(){
         return this.props.department.jobs.map((item, i) => {
             return <li key={i} className="single-job">
@@ -21,7 +20,6 @@ class Department extends Component {
             </li>
         });
     }
-
     renderButtons() {
         if (this.state.editing) {
             return (
@@ -34,7 +32,6 @@ class Department extends Component {
                 </span>
             );
         }
-
         return (
             <span className="btn-dep-default">
                 <input type="checkbox"  checked={this.props.department.check} onChange={this.onCheck.bind(this)}/>
@@ -50,17 +47,20 @@ class Department extends Component {
     render() {
         return (
             <li className="single-department">
-                {this.renderButtons()}
-                {this.props.department.fold && <div>
-                    <ul className="jobs-area">{this.renderJobs()}</ul>
-                    {this.state.showAddJob && <div className="add-job-area cf" style={{paddingTop:"10px"}}>
-                        <input className="input-add-job-name" placeholder="名称(少于20个字符)"/>
-                        <input type="text" className="input-add-job-nu" placeholder="数量(小于100)"/>
-                        <button className="btn-comfirm-add-job" onClick={this.comfirmAddJob.bind(this)}>确定</button>
-                        <button className="btn-cancel-add-job" onClick={this.hideAddJob.bind(this)}>取消</button>
-                    </div>}
-                    <button onClick={this.showAddJob.bind(this)} className="btn-add-job">添加职位</button>
-                </div>}
+                    {this.renderButtons()}
+                {this.props.department.fold &&
+                    <div>
+                        <ul className="jobs-area">{this.renderJobs()}</ul>
+                        {this.state.showAddJob &&
+                            <div className="add-job-area cf" style={{paddingTop:"10px"}}>
+                                <input className="input-add-job-name" placeholder="名称(少于20个字符)"/>
+                                <input type="text" className="input-add-job-nu" placeholder="数量(小于100)"/>
+                                <button className="btn-comfirm-add-job" onClick={this.comfirmAddJob.bind(this)}>确定</button>
+                                <button className="btn-cancel-add-job" onClick={this.hideAddJob.bind(this)}>取消</button>
+                            </div>}
+                        <button onClick={this.showAddJob.bind(this)} className="btn-add-job">添加职位</button>
+                    </div>
+                }
             </li>
         );
     }
@@ -89,7 +89,6 @@ class Department extends Component {
             alert("职位名不能为空")
         }
     }
-
     onEditClick(e) {
         this.setState({editing: true});
     }
@@ -112,7 +111,6 @@ class Department extends Component {
     updateInputDep(e){
         this.setState({inputDep:e.target.value})
     }
-
 }
 
 export default Department;
